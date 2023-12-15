@@ -1,0 +1,27 @@
+Vivado Simulator v2023.1.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 'curr_state_o' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv:141]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.riscv_pkg
+Compiling module xil_defaultlib.bram(IMEM_INIT=1)
+Compiling module xil_defaultlib.riscv_IF
+Compiling module xil_defaultlib.riscv_regFile
+Compiling module xil_defaultlib.riscv_ID
+Compiling module xil_defaultlib.riscv_alu
+Compiling module xil_defaultlib.riscv_EX
+Compiling module xil_defaultlib.bram_default
+Compiling module xil_defaultlib.riscv_MEM
+Compiling module xil_defaultlib.riscv_WB
+Compiling module xil_defaultlib.riscv_ctrl
+Compiling module xil_defaultlib.riscv_top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav

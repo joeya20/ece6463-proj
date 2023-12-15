@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../riscv.srcs/sources_1/new/bram.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_pkg.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_EX.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_ID.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_IF.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_MEM.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_WB.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_alu.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_ctrl.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_regFile.sv" \
+"../../../../riscv.srcs/sources_1/new/riscv_top.sv" \
+"../../../../riscv.srcs/sim_1/new/tb_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

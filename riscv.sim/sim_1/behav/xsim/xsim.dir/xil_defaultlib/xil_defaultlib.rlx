@@ -1,0 +1,21 @@
+0.7
+2020.2
+Jun 16 2023
+19:55:58
+C:/Users/JoeyD/riscv/riscv.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sim_1/new/tb_riscv_ctrl.sv,1701793138,systemVerilog,,,,tb_riscv_ctrl,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sim_1/new/tb_top.sv,1702482043,systemVerilog,,,,tb_top,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv,1702481866,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_pkg.sv,,bram,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_EX.sv,1701880551,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ID.sv,,riscv_EX,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ID.sv,1701880436,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_IF.sv,,riscv_ID,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_IF.sv,1702052974,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_MEM.sv,,riscv_IF,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_MEM.sv,1702431867,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_WB.sv,,riscv_MEM,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_WB.sv,1701880390,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_alu.sv,,riscv_WB,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_alu.sv,1701880508,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv,,riscv_alu,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv,1702050199,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_regFile.sv,,riscv_ctrl,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_pkg.sv,1702050213,systemVerilog,C:/Users/JoeyD/riscv/riscv.srcs/sim_1/new/tb_top.sv;C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_EX.sv;C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ID.sv;C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_IF.sv;C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_MEM.sv;C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_alu.sv;C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv;C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_EX.sv,,riscv_pkg,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_regFile.sv,1701992165,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv,,riscv_regFile,,uvm,,,,,,
+C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv,1702484354,systemVerilog,,C:/Users/JoeyD/riscv/riscv.srcs/sim_1/new/tb_top.sv,,riscv_top,,uvm,,,,,,
+C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sim_1/imports/dv/tb_riscv_ID.sv,1701563230,systemVerilog,,,,tb_riscv_ID,,uvm,,,,,,
+C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sim_1/new/tb_riscv_IF.sv,1701882504,systemVerilog,,,,tb_riscv_IF,,uvm,,,,,,
+C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sim_1/new/tb_riscv_MEM.sv,1701734943,systemVerilog,,,,tb_riscv_MEM,,uvm,,,,,,
