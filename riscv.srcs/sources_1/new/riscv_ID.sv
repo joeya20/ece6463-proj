@@ -1,8 +1,6 @@
 `timescale 1ns / 1ps
 
-module riscv_ID
-import riscv_pkg::*;
-(
+module riscv_ID import riscv_pkg::*; (
     input   logic           clk_i,
     input   logic           rst_ni,
     input   logic [31:0]    instr_i,
@@ -45,9 +43,10 @@ always_ff @( posedge clk_i ) begin : pipeline_regs
             S_type: imm_o <= S_imm;
             J_type: imm_o <= J_imm;
             B_type: imm_o <= B_imm;
+            JALR: imm_o <= I_imm;
+            LOAD: imm_o <= I_imm;
             AUIPC: imm_o <= U_imm;
             LUI: imm_o <= U_imm;
-            JALR: imm_o <= I_imm;
             default: ;
         endcase
     end

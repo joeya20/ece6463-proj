@@ -29,21 +29,22 @@ always #(`CLK/2) clk = ~clk;
 
 logic           rst_n;
 logic [31:0] ALU_out, wdata;
-logic dmem_en, dmem_wen;
+logic en, wen;
 store_type_t store_type;
 load_type_t load_type;
 logic [31:0] rdata;
-
+logic [15:0] sw;
 
 riscv_MEM dut(
     .clk_i(clk),
     .rst_ni(rst_n),
-    .ALU_out_i(ALU_out),
+    .alu_out_i(ALU_out),
     .wdata_i(wdata),
-    .dmem_en_i(dmem_en),
-    .dmem_wen_i(dmem_wen),
+    .en_i(en),
+    .wen_i(wen),
     .store_type_i(store_type),
     .load_type_i(load_type),
+    .sw_i(sw),
     .rdata_o(rdata)
 );
 
@@ -51,8 +52,8 @@ initial begin
     rst_n = 1'b1;
     ALU_out = '0;
     wdata = '0;
-    dmem_en = 1'b0;
-    dmem_wen = 1'b0;
+    en = 1'b0;
+    wen = 1'b0;
     store_type = SW;
     load_type = LW;
 
@@ -68,22 +69,18 @@ initial begin
         else $error("Assertion reset_test failed!");
         
     @(negedge clk);
-    dmem_en = 1'b1;
+    en = 1'b1;
     
     @(posedge clk);
     en_test: assert (rdata == '0)
         else $error("Assertion en_test failed!");
         
     @(negedge clk);
-    dmem_wen = 1'b1;
+    wen = 1'b1;
     wdata = 32'hdeadbeef;
-    
-    @(posedge clk);
-    read_test: assert (rdata == 32'd1)
-        else $error("Assertion read_test failed!");
         
     @(negedge clk);
-    dmem_wen = 1'b0;
+    wen = 1'b0;
     
     // have to wait 2 clock cycles
     @(posedge clk);    
@@ -107,7 +104,7 @@ initial begin
     
     @(negedge clk);
     load_type = LW;
-    dmem_wen = 1'b1;
+    wen = 1'b1;
     store_type = SH;
     wdata = 32'h0000_0000;
     @(posedge clk);
@@ -124,8 +121,43 @@ initial begin
     @(posedge clk);
     SB_test: assert (rdata == 32'hde00_0000)
         else $error("Assertion SB_test failed!");
-
+    
+    @(negedge clk);
+    ALU_out = 32'h00100000;
+    load_type = LW;
+    wen= 1'b0;
+    en = 1'b1;
+    
     @(posedge clk);
+    N_num_test: assert (rdata == 32'd16956693)
+        else $error("Assertion N number read test failed!");
+    
+    
+    @(negedge clk);
+    ALU_out = 32'h00100010;
+    sw = 16'hbeef;
+    wen= 1'b0;
+    en = 1'b1;
+    
+    @(posedge  clk);
+    @(posedge  clk);
+    @(posedge  clk);
+    sw_read_test: assert (rdata == 32'h0000beef)
+        else $error("Assertion sw_read_test test failed!");
+        
+    @(negedge clk);
+    ALU_out = 32'h00100014;
+    wen= 1'b1;
+    en = 1'b1;
+    wdata = 32'hDEADBABE;
+    store_type = SW;
+    
+    @(posedge  clk);
+    @(posedge  clk);
+    @(posedge  clk);
+    led_read_write_test: assert (rdata == 32'h0000_babe)
+        else $error("Assertion led_read_write_test test failed!");
+    
     $finish(0);
 end
 

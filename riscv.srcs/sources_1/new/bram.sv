@@ -9,7 +9,8 @@
 module bram #(
   parameter integer LEN = 32,
   parameter integer DEPTH = 2**10,
-  parameter integer IMEM_INIT = 0
+  parameter integer IMEM_INIT = 0,
+  parameter string IMEM_PATH = ""
 ) (
   input   wire                      clk_i,
   input   wire                      rst_ni,
@@ -41,8 +42,8 @@ end
 
 generate if(IMEM_INIT)
     initial begin
-        $display("reading mem_init.txt");
-        $readmemh("mem_init.txt", mem);
+        $display("initializing memory");
+        $readmemh(IMEM_PATH, mem);
     end
 endgenerate
 

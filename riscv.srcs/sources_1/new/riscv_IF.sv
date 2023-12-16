@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 
-module riscv_IF import riscv_pkg::*; (
+module riscv_IF import riscv_pkg::*;  # (
+     parameter string IMEM_PATH = ""
+) (
     input   logic           clk_i,
     input   logic           rst_ni,
 
@@ -45,7 +47,7 @@ logic [9:0] imem_addr;
 assign PC_wa = (PC_q >> 2);
 assign imem_addr = PC_wa[9:0];
 
-bram #(.IMEM_INIT(1)) imem
+bram #(.IMEM_INIT(1), .IMEM_PATH(IMEM_PATH)) imem
 (
     .clk_i(clk_i),
     .rst_ni(rst_ni),

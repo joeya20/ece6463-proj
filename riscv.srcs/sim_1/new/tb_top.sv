@@ -11,7 +11,8 @@ logic [3:0] sw, led;
 logic [31:0] PC;
 state_t curr_state;
 
-riscv_top dut(
+riscv_top #(.IMEM_PATH("random_seq.txt"))
+dut(
     /* AUTOINST */
     // Inputs
     .CLK100MHZ (clk),
@@ -19,6 +20,7 @@ riscv_top dut(
     .sw_i(sw),
     // Outputs
     .PC_o  (PC),
+    .curr_state_o(curr_state),
     .led_o(led)
 );
 
@@ -31,7 +33,12 @@ initial begin
     @(posedge clk);
     rst_n = 1'b1;
 
-    @(posedge clk * 50);
+    @(dut.ctrl.curr_state == HALT);
+//    assert(dut.ID.rf.regs[5] == 32'h3f547f8e)
+//     else $error("A not valid");
+//    assert(dut.ID.rf.regs[18] == 32'h9cc4b5e0) 
+//     else $error("B not valid");
+        
     $stop(0);
 end
 

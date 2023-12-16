@@ -47,6 +47,9 @@
     logic take_branch_q, take_branch_d;
     assign take_branch_o = take_branch_q;
 
+    logic jalr_q, jalr_d;
+    assign jalr_o = jalr_q;
+
     assign instr_type_o =
         (opcode == 7'b0110011) ?    R_type  :
         (opcode == 7'b0010011) ?    I_type  :
@@ -65,10 +68,12 @@
         if(!rst_ni) begin
             curr_state <= FETCH;
             take_branch_q <= '0;
+            jalr_q <= '0;
         end
         else begin
             curr_state <= next_state;
             take_branch_q <= take_branch_d;
+            jalr_q <= jalr_d;
         end
     end
 
@@ -81,12 +86,12 @@
         // ID stage
         reg_wen_o = 1'b0;
         // EX stage
+        jalr_d = jalr_q;
         use_imm_o = 1'b0;
         use_pc_o = 1'b0;
         clr_alu_srcA_o = 1'b0;
         use_const_4_o = 1'b0;
         alu_op_o = ADD;
-        jalr_o = 1'b0;
         // MEM stage
         dmem_en_o = 1'b0;
         dmem_wen_o = 1'b0;
@@ -97,6 +102,7 @@
 
         case (curr_state)
             UPDATE_PC: begin
+                jalr_d = 1'b0;
                 take_branch_d = 1'b0;
                 update_pc_o = 1'b1;
                 next_state = FETCH;
@@ -206,7 +212,7 @@
                 use_pc_o = 1'b1;
                 use_imm_o = 1'b0;
                 use_const_4_o = 1'b1;
-                jalr_o = (instr_type_o == JALR);
+                jalr_d = (instr_type_o == JALR);
                 clr_alu_srcA_o = 1'b0;
                 alu_op_o = ADD;
             end

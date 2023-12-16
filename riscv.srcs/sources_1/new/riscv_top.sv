@@ -1,14 +1,15 @@
 `timescale 1ns / 1ps
 
-module riscv_top
-  import riscv_pkg::*;
-(
+module riscv_top   import riscv_pkg::*; #(
+  parameter string IMEM_PATH = ""
+) (
     input logic CLK100MHZ,
     input logic rst_ni,
     input  logic [15:0] sw_i,
     
     output logic [15:0] led_o,
-    output logic [31:0] PC_o
+    output logic [31:0] PC_o,
+    output state_t  curr_state_o
 );
 
   // datapath signals
@@ -34,12 +35,15 @@ module riscv_top
   logic jalr;
   logic clr_alu_srcA;
   alu_op_t alu_op;
-  logic dmem_en, dmem_wen;
+  logic mem_en, mem_wen;
   store_type_t store_type;
   load_type_t load_type;
   logic mem_to_reg;
+  state_t curr_state;
   
-  riscv_IF IF (
+  assign curr_state_o = curr_state;
+  
+  riscv_IF #(.IMEM_PATH(IMEM_PATH)) IF (
     // Inputs
     .clk_i(CLK100MHZ),
     .rst_ni(rst_ni),
@@ -95,8 +99,8 @@ module riscv_top
     .rst_ni(rst_ni),
     .alu_out_i(alu_out),
     .wdata_i(reg_rdataB),
-    .dmem_en_i(dmem_en),
-    .dmem_wen_i(dmem_wen),
+    .en_i(mem_en),
+    .wen_i(mem_wen),
     .store_type_i(store_type),
     .load_type_i(load_type),
     .sw_i(sw_i),
@@ -133,8 +137,8 @@ module riscv_top
     .jalr_o(jalr),
     .clr_alu_srcA_o(clr_alu_srcA),
     .alu_op_o(alu_op),
-    .dmem_en_o(dmem_en),
-    .dmem_wen_o(dmem_wen),
+    .dmem_en_o(mem_en),
+    .dmem_wen_o(mem_wen),
     .store_type_o(store_type),
     .load_type_o(load_type),
     .mem_to_reg_o(mem_to_reg),
