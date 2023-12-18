@@ -72,10 +72,8 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 6
-set_param synth.incrementalSynthesisCache C:/Users/JoeyD/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-28292-joey-lab-pc/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/JoeyD/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-17324-joey-lab-pc/incrSyn
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -93,17 +91,18 @@ set_property ip_output_repo c:/Users/JoeyD/riscv/riscv.cache/ip [current_project
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem C:/Users/JoeyD/riscv/riscv.srcs/sim_1/new/rc5.mem
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/bram.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/riscv_pkg.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_EX.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ID.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/riscv_IF.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_MEM.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_WB.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_alu.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ctrl.sv
-  C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_regFile.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_pkg.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_EX.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ID.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_IF.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_MEM.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_WB.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_alu.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv
+  C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_regFile.sv
   C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv
 }
 OPTRACE "Adding files" END { }
@@ -115,8 +114,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc]
+read_xdc C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

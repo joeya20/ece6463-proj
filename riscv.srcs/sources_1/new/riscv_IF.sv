@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module riscv_IF import riscv_pkg::*;  # (
-     parameter string IMEM_PATH = ""
+     parameter string IMEM_PATH = "rc5.mem"
 ) (
     input   logic           clk_i,
     input   logic           rst_ni,

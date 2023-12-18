@@ -116,8 +116,6 @@ OPTRACE "impl_1" END { }
 }
 
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -129,7 +127,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 6
-  set_param synth.incrementalSynthesisCache C:/Users/JoeyD/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-28292-joey-lab-pc/incrSyn
+  set_param synth.incrementalSynthesisCache C:/Users/JoeyD/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-17324-joey-lab-pc/incrSyn
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
@@ -146,7 +144,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/JoeyD/riscv/riscv.runs/synth_1/riscv_top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc
+  read_xdc C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

@@ -3,8 +3,8 @@
 # SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
 # IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
 # SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Fri Dec  8 11:45:11 2023
-# Process ID: 6564
+# Start of session at: Mon Dec 18 10:38:37 2023
+# Process ID: 12488
 # Current directory: C:/Users/JoeyD/riscv/riscv.runs/synth_1
 # Command line: vivado.exe -log riscv_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source riscv_top.tcl
 # Log file: C:/Users/JoeyD/riscv/riscv.runs/synth_1/riscv_top.vds
@@ -12,7 +12,6 @@
 # Running On: joey-lab-pc, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 16, Host memory: 34050 MB
 #-----------------------------------------------------------
 source riscv_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 479.312 ; gain = 202.793
 Command: read_checkpoint -auto_incremental -incremental C:/Users/JoeyD/riscv/riscv.srcs/utils_1/imports/synth_1/riscv_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/JoeyD/riscv/riscv.srcs/utils_1/imports/synth_1/riscv_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,46 +24,42 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 42884
+INFO: [Synth 8-7075] Helper process launched with PID 11776
+INFO: [Synth 8-11241] undeclared symbol 'N_addr_valid', assumed default net type 'wire' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_MEM.sv:36]
+INFO: [Synth 8-11241] undeclared symbol 'curr_state_o', assumed default net type 'wire' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv:44]
+INFO: [Synth 8-11241] undeclared symbol 'PC_o', assumed default net type 'wire' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv:148]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1291.449 ; gain = 411.438
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1290.789 ; gain = 410.219
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'riscv_top' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_IF' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/riscv_IF.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'bram' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/bram.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'riscv_IF' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_IF.sv:3]
+	Parameter IMEM_PATH bound to: rc5.mem - type: string 
+INFO: [Synth 8-6157] synthesizing module 'bram' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv:9]
 	Parameter IMEM_INIT bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'bram' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/bram.sv:9]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_IF' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/riscv_IF.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_ID' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ID.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_regFile' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_regFile.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_regFile' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_regFile.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_ID' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ID.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_EX' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_EX.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_alu' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_alu.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_alu' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_alu.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_EX' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_EX.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_MEM' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_MEM.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'bram__parameterized0' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/bram.sv:9]
-INFO: [Synth 8-6155] done synthesizing module 'bram__parameterized0' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/imports/rtl/bram.sv:9]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_MEM' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_MEM.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_WB' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_WB.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_WB' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_WB.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'riscv_ctrl' [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ctrl.sv:3]
-INFO: [Synth 8-226] default block is never used [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ctrl.sv:149]
-INFO: [Synth 8-226] default block is never used [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ctrl.sv:178]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_ctrl' (0#1) [C:/Users/JoeyD/riscv_processor/riscv_processor.srcs/sources_1/new/riscv_ctrl.sv:3]
+	Parameter IMEM_PATH bound to: rc5.mem - type: string 
+INFO: [Synth 8-251] initializing memory [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv:45]
+INFO: [Synth 8-3876] $readmem data file 'rc5.mem' is read successfully [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv:46]
+INFO: [Synth 8-6155] done synthesizing module 'bram' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_IF' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_IF.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_ID' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ID.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_regFile' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_regFile.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_regFile' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_regFile.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_ID' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ID.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_EX' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_EX.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_alu' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_alu.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_alu' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_alu.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_EX' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_EX.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_MEM' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_MEM.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'bram__parameterized0' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'bram__parameterized0' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/bram.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_MEM' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_MEM.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_WB' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_WB.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_WB' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_WB.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_ctrl' [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv:155]
+INFO: [Synth 8-226] default block is never used [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv:184]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_ctrl' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_ctrl.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'riscv_top' (0#1) [C:/Users/JoeyD/riscv/riscv.srcs/sources_1/new/riscv_top.sv:3]
-WARNING: [Synth 8-3917] design riscv_top has port led_o[15] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[14] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[13] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[12] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[11] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[10] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[9] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[8] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[7] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[6] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[5] driven by constant 0
 WARNING: [Synth 8-7129] Port instr_i[24] in module riscv_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr_i[23] in module riscv_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr_i[22] in module riscv_ctrl is either unconnected or has no load
@@ -87,266 +82,170 @@ WARNING: [Synth 8-7129] Port instr_i[2] in module riscv_ID is either unconnected
 WARNING: [Synth 8-7129] Port instr_i[1] in module riscv_ID is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr_i[0] in module riscv_ID is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1389.164 ; gain = 509.152
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1388.801 ; gain = 508.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1389.164 ; gain = 509.152
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1388.801 ; gain = 508.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1389.164 ; gain = 509.152
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1388.801 ; gain = 508.230
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1389.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1388.801 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw_i[0]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:12]
+Parsing XDC File [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:82]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[0]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:83]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[1]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:84]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[1]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:85]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[2]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:86]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[2]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:87]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[3]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:88]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[3]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:89]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[4]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:90]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[4]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:91]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[5]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:92]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[5]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:93]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[6]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:94]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[6]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:95]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[7]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:97]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[7]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:98]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[8]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:100]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[8]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:101]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[9]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:102]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[9]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:103]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[10]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:104]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[10]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:105]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[11]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:106]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[11]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:107]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[12]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:209]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:209]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[12]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:210]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:210]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[13]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:212]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:212]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[13]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:213]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[14]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:215]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:215]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[14]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:216]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:216]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[15]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:218]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:218]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw_i[15]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:219]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:219]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:82]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:221]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:221]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:83]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:222]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:84]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:224]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:224]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:85]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:225]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:225]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:227]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:227]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:87]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:228]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:228]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:230]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:230]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:89]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:231]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc:231]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:90]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:90]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:91]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:91]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:92]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:92]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:93]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:93]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:94]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:94]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:95]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:95]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:97]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:97]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:98]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:98]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:100]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:100]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:101]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:101]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:102]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:102]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:103]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:103]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:104]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:104]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:105]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:105]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:106]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:106]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:107]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:107]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:209]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:209]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:210]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:210]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:212]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:212]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:213]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:213]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:215]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:215]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:216]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:216]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:218]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:218]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:219]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:219]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:221]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:221]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:222]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:222]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:224]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:224]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:225]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:225]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:227]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:227]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:228]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:228]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:230]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:230]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:231]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc:231]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/JoeyD/OneDrive/Desktop/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/riscv_top_propImpl.xdc].
+Finished Parsing XDC File [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/JoeyD/riscv/riscv.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/riscv_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/riscv_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1499.703 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1442.730 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1499.703 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1442.730 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1499.703 ; gain = 619.691
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1499.703 ; gain = 619.691
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1499.703 ; gain = 619.691
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'riscv_ctrl'
 ---------------------------------------------------------------------------------------------------
@@ -374,7 +273,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module '
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'one-hot' in module 'riscv_ctrl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1499.703 ; gain = 619.691
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -388,16 +287,19 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 40    
-	                1 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
 +---RAMs : 
 	              32K Bit	(1024 X 32 bit)          RAMs := 2     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 12    
-	   4 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 9     
+	   6 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 3     
 	  19 Input   19 Bit        Muxes := 1     
 	  13 Input   19 Bit        Muxes := 1     
 	   7 Input   19 Bit        Muxes := 1     
 	   2 Input   19 Bit        Muxes := 1     
+	   3 Input   16 Bit        Muxes := 1     
 	   4 Input   16 Bit        Muxes := 1     
 	   4 Input    8 Bit        Muxes := 1     
 	  19 Input    5 Bit        Muxes := 1     
@@ -406,13 +308,14 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit        Muxes := 1     
 	   8 Input    4 Bit        Muxes := 1     
 	  19 Input    4 Bit        Muxes := 1     
+	   9 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
 	  19 Input    3 Bit        Muxes := 1     
 	  19 Input    2 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 36    
-	   8 Input    1 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 2     
-	  19 Input    1 Bit        Muxes := 9     
+	   9 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 3     
+	  19 Input    1 Bit        Muxes := 10    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -429,17 +332,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design riscv_top has port led_o[15] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[14] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[13] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[12] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[11] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[10] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[9] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[8] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[7] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[6] driven by constant 0
-WARNING: [Synth 8-3917] design riscv_top has port led_o[5] driven by constant 0
 WARNING: [Synth 8-7129] Port instr_i[24] in module riscv_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr_i[23] in module riscv_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr_i[22] in module riscv_ctrl is either unconnected or has no load
@@ -454,15 +346,8 @@ WARNING: [Synth 8-7129] Port instr_i[10] in module riscv_ctrl is either unconnec
 WARNING: [Synth 8-7129] Port instr_i[9] in module riscv_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr_i[8] in module riscv_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr_i[7] in module riscv_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr_i[6] in module riscv_ID is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr_i[5] in module riscv_ID is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr_i[4] in module riscv_ID is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr_i[3] in module riscv_ID is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr_i[2] in module riscv_ID is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr_i[1] in module riscv_ID is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr_i[0] in module riscv_ID is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1499.703 ; gain = 619.691
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -484,13 +369,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 1499.703 ; gain = 619.691
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1499.703 ; gain = 619.691
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -513,7 +398,7 @@ Start Technology Mapping
 INFO: [Synth 8-7052] The timing for the instance IF/imem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance MEM/dmem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1442.730 ; gain = 562.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -531,37 +416,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1450.605 ; gain = 570.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1450.605 ; gain = 570.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 1450.605 ; gain = 570.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 1450.605 ; gain = 570.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 1450.605 ; gain = 570.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 1450.605 ; gain = 570.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -580,40 +465,40 @@ Report Cell Usage:
 |1     |BUFG     |     1|
 |2     |CARRY4   |    28|
 |3     |LUT1     |     2|
-|4     |LUT2     |    27|
-|5     |LUT3     |    90|
-|6     |LUT4     |    89|
-|7     |LUT5     |   275|
-|8     |LUT6     |   975|
+|4     |LUT2     |    31|
+|5     |LUT3     |   118|
+|6     |LUT4     |   111|
+|7     |LUT5     |   303|
+|8     |LUT6     |   942|
 |9     |MUXF7    |   256|
 |10    |RAMB36E1 |     2|
-|12    |FDRE     |  1182|
+|12    |FDRE     |  1231|
 |13    |FDSE     |     1|
-|14    |IBUF     |     2|
+|14    |IBUF     |    18|
 |15    |OBUF     |    16|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 1450.605 ; gain = 570.035
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 1508.047 ; gain = 517.496
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1508.047 ; gain = 628.035
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 1450.605 ; gain = 516.105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 1450.605 ; gain = 570.035
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1519.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1462.664 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 286 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1523.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1466.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: f5770125
+Synth Design complete | Checksum: 134ced65
 INFO: [Common 17-83] Releasing license: Synthesis
-49 Infos, 137 Warnings, 72 Critical Warnings and 0 Errors encountered.
+54 Infos, 76 Warnings, 40 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 1523.617 ; gain = 1019.926
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1466.305 ; gain = 963.711
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/JoeyD/riscv/riscv.runs/synth_1/riscv_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file riscv_top_utilization_synth.rpt -pb riscv_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Dec  8 11:45:47 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 18 10:39:08 2023...

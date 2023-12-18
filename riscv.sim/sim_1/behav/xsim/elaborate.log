@@ -8,4 +8,21 @@ Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 16 for port 'sw_i' [C:/Users/JoeyD/riscv/riscv.srcs/sim_1/new/tb_top.sv:20]
 WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 16 for port 'led_o' [C:/Users/JoeyD/riscv/riscv.srcs/sim_1/new/tb_top.sv:24]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.riscv_pkg
+Compiling module xil_defaultlib.bram(IMEM_INIT=1,IMEM_PATH="rand...
+Compiling module xil_defaultlib.riscv_IF(IMEM_PATH="random_seq.t...
+Compiling module xil_defaultlib.riscv_regFile
+Compiling module xil_defaultlib.riscv_ID
+Compiling module xil_defaultlib.riscv_alu
+Compiling module xil_defaultlib.riscv_EX
+Compiling module xil_defaultlib.bram_default
+Compiling module xil_defaultlib.riscv_MEM
+Compiling module xil_defaultlib.riscv_WB
+Compiling module xil_defaultlib.riscv_ctrl
+Compiling module xil_defaultlib.riscv_top(IMEM_PATH="random_seq....
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav

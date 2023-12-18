@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 
 module riscv_top   import riscv_pkg::*; #(
-  parameter string IMEM_PATH = ""
+  parameter string IMEM_PATH = "rc5.mem"
 ) (
     input logic CLK100MHZ,
     input logic rst_ni,
     input  logic [15:0] sw_i,
     
-    output logic [15:0] led_o,
-    output logic [31:0] PC_o,
-    output state_t  curr_state_o
+    output logic [15:0] led_o
+//    output logic [31:0] PC_o,
+//    output state_t  curr_state_o
 );
 
   // datapath signals
